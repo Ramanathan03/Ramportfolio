@@ -1,0 +1,148 @@
+.contact-grid {
+  display: grid;
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+.Contact-div {
+  margin-top: 100px;
+  margin-left: 150px;
+}
+.sendButton {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  width: 30%;
+  height: 40px;
+  border: 1px solid #fd4b1c;
+
+  background: no-repeat, #fd4b1c;
+  margin-left: 6px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+.social-media-contacts {
+  padding-left: 25%;
+  padding-top: 5%;
+}
+.email {
+  color: #d0d0d0;
+  padding-top: 4%;
+  margin-block-end: 0.1em;
+}
+.padding-left-in-contact {
+  padding-left: 31%;
+}
+#contact-form {
+  padding-top: 15%;
+}
+.title {
+  font-family: "Roboto", sans-serif;
+  color: #fd4b1c;
+  font-size: 2em;
+  text-align: center;
+  margin-block-end: 0em;
+}
+.side-header {
+  font-family: "Roboto", sans-serif;
+  margin-block-start: 0.2em;
+  font-size: 1.4em;
+  padding-right: 140px;
+  text-align: center;
+}
+
+.contact-label-div {
+  text-align: initial;
+  font-weight: 500;
+}
+.contact-form-input::placeholder {
+  padding-left: 5px;
+}
+
+.contact-form-input {
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  height: 25px;
+  width: 300px;
+  box-shadow: 0px 0px 2px;
+}
+.contact-form-textarea ::placeholder {
+  padding-left: 5px;
+}
+.contact-form-textarea {
+  height: 150px;
+  width: 300px;
+  box-shadow: 0px 0px 2px;
+  border-radius: 1px;
+}
+.mobileViewPadding {
+  padding: 5px;
+}
+
+@media (max-width: 435px) {
+  .Contact-div {
+    margin-left: 4px;
+  }
+  .contact-grid {
+    grid-template-columns: 12fr;
+  }
+  .title {
+    text-align: initial;
+    padding-left: 0px;
+  }
+  .side-header {
+    text-align: initial;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .padding-left-in-contact {
+    padding-left: 0px;
+    width: 90%;
+  }
+  .social-media-contacts {
+    padding-left: 0px;
+    padding-top: 5px;
+  }
+  .padding-contact-tablet {
+    padding-left: 40px;
+  }
+  .contact-form-input {
+    width: 90%;
+  }
+  .contact-form-textarea {
+    width: 90%;
+  }
+  .sendButton {
+    width: 50%;
+    margin-left: 20px;
+  }
+  .mobileViewPadding {
+    padding: 5px;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 436px) and (max-width: 800px) {
+  .padding-contact-tablet {
+    padding-left: 40px;
+  }
+  .title {
+    text-align: initial;
+  }
+  .side-header {
+    text-align: initial;
+    padding-right: 0px;
+  }
+  .social-media-contacts {
+    padding-left: 0%;
+  }
+  .padding-left-in-contact {
+    width: 100% !important;
+    padding: 0px;
+  }
+  .sendButton {
+    width: 50%;
+  }
+}
