@@ -10,6 +10,7 @@ body {
   padding-top: 0px;
   background-color: rgba(0, 0, 0, 1);
   color: white;
+  
 }
 
 code {
@@ -17,8 +18,5 @@ code {
     monospace;
 }
 
-@media (max-width: 435px) {
-  body {
-    overflow-x: hidden;
-  }
-}
+
+

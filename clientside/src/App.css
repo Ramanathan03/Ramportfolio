@@ -138,7 +138,7 @@
   font-size: 25px;
 }
 
-@media (max-width: 435px) {
+@media (max-width:435px) {
   .header-description-layout {
     display: grid;
     grid-template-columns: 12fr;
@@ -234,7 +234,7 @@
     z-index: 5;
   }
 }
-@media (min-width: 436px) and (max-width: 800px) {
+@media (min-width:436px) and (max-width:800px) {
   .header-props {
     height: 40em;
   }

@@ -63,9 +63,9 @@ class App extends React.Component {
       <div>
         <Header />
 
-        <section className="section">
+        <section>
           <About />
-          <Slider />
+          
           <Contact />
           <Footer />
         </section>
