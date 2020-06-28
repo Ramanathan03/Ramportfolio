@@ -19,6 +19,6 @@ code {
 
 @media (max-width: 435px) {
   body {
-    
+    overflow-x: hidden;
   }
 }
