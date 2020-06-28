@@ -47,20 +47,30 @@ class NavElement extends React.Component {
 
   mobileMenu = () => {
     $(document).ready(() => {
+      if($(window).width() < 435){
       let menu = $(".mobile-menu").css("display");
       if (menu === "flex") {
         $(".mobile-menu").css({ display: "none" });
         $(".X-cancle").css({ display: "flex" });
         $(".nav-ul").css({ display: "flex" });
+        $("body").css({
+         "overflow-y": "hidden"
+        });
       } else {
         $(".mobile-menu").css({ display: "flex" });
         $(".X-cancle").css({ display: "none" });
         $(".nav-ul").css({ display: "none" });
+        $("body").css({
+         "overflow-y": "scroll"
+        });
       }
+    }
     });
+
   };
 
   render() {
+
     return (
       <div>
         <Switch>
@@ -80,17 +90,17 @@ class NavElement extends React.Component {
         </div>
 
         <ul className="nav-ul">
-          <li className="nav-li">
+          <li className="nav-li" onClick={this.mobileMenu}>
             <Link to="/" className="nav-text" onClick={this.HomeBack}>
               Home
             </Link>
           </li>
-          <li className="nav-li">
+          <li className="nav-li" onClick={this.mobileMenu}>
             <Link to="/about" className="nav-text" onClick={this.AboutScroll}>
               About
             </Link>
           </li>
-          <li className="nav-li">
+          <li className="nav-li" onClick={this.mobileMenu}>
             <Link
               to="/projects"
               className="nav-text"
@@ -99,7 +109,7 @@ class NavElement extends React.Component {
               Projects
             </Link>
           </li>
-          <li className="nav-li-contact">
+          <li className="nav-li-contact" onClick={this.mobileMenu}>
             <Link
               to="/contact"
               className="nav-text"

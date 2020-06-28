@@ -180,7 +180,7 @@
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
-    margin: 16px;
+    margin-right: 160px;
   }
   .menu {
     display: none;
@@ -190,11 +190,28 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: #000000de;
+    background: #000000;
+    box-shadow: 0px 0px 5px black;
     transition: 2s;
-    transform: scale(2.5);
+    
     height: 100vh;
+    width:60vw;
+    position: absolute;
   }
+  .nav-li {
+ 
+    position: relative;
+    top: -250px;
+}
+.nav-li-contact {
+    background-color: transparent; 
+   
+    margin-bottom: 20px;
+    position: relative;
+    top: -250px;
+   
+}
+
 
   .X {
     width: 40px;
