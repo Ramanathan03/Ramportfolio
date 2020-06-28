@@ -65,7 +65,7 @@ class App extends React.Component {
 
         <section>
           <About />
-          
+          <Slider />
           <Contact />
           <Footer />
         </section>

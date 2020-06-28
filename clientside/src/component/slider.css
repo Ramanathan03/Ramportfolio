@@ -103,6 +103,9 @@ hr {
     left: 50px;
     top: 160px;
   }
+  .sliderShow {
+    display: -webkit-box;
+}
   .next {
     left: -380px;
     transform: translateX(10px);
