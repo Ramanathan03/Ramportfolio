@@ -2,6 +2,7 @@ let express = require("express");
 let router = express.Router();
 let nodemailer = require("nodemailer");
 let cors = require("cors");
+let compression = require('compression')
 const path = require("path");
 const env = require("dotenv");
 
@@ -60,6 +61,7 @@ router.post("/send", (req, res, next) => {
 
 const app = express();
 app.use(cors());
+app.use(compression());
 app.use(express.json());
 //app.use("/", router);
 app.listen(process.env.PORT || 5000);
