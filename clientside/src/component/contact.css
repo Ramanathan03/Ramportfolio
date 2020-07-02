@@ -126,21 +126,29 @@
 
 @media (min-width: 436px) and (max-width: 800px) {
   .padding-contact-tablet {
-    padding-left: 40px;
+    padding-left: 20px;
   }
   .title {
     text-align: initial;
+    font-size: 1.6em;
   }
   .side-header {
     text-align: initial;
     padding-right: 0px;
   }
+  ul{
+    padding:0px;
+  }
+  .Contact-div{
+    margin-left:0px;
+  }
   .social-media-contacts {
-    padding-left: 0%;
+    padding-left: 20px;
   }
   .padding-left-in-contact {
     width: 100% !important;
     padding: 0px;
+    font-size:17px;
   }
   .sendButton {
     width: 50%;

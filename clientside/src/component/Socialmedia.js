@@ -2,7 +2,7 @@ import React from "react";
 
 function Socialmedia() {
   return (
-    <ul style={{ listStyle: "none" }}>
+    <ul >
       <li className="socialmedia">
         <a href="" className="socialmedia-text">
           <i className="fab fa-twitter  "></i>

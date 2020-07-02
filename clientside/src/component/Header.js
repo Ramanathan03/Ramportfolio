@@ -21,7 +21,8 @@ class Header extends React.Component {
     return (
       <header className="header-props">
         <NavElement />
-
+       <div></div>
+       <div></div>
         <div className="header-description-layout">
           <div className="header-padding-tabletView">
             <div className="job-line">

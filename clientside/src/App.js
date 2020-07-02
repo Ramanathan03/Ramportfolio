@@ -1,14 +1,17 @@
-import React from "react";
+import React,{ Suspense} from "react";
 import { Route, Switch } from "react-router-dom";
-import Socialmedia from "./component/Socialmedia";
-import NavElement from "./component/NavElement";
-import Contact from "./component/Contact";
-import About from "./component/About";
-import Slider from "./component/Slider";
-import Footer from "./component/Footer";
 import Header from "./component/Header";
 import $ from "jquery";
 import "./App.css";
+
+// React Lazy
+const Contact =  React.lazy(()=> import("./component/Contact"));
+const About  =  React.lazy(()=> import("./component/About"));
+const Slider = React.lazy(()=> import("./component/Slider"));
+const Footer =  React.lazy(()=> import("./component/Footer"));
+
+
+
 
 class App extends React.Component {
   constructor(props) {
@@ -61,14 +64,16 @@ class App extends React.Component {
 
     return (
       <div>
-        <Header />
-
+      <Header />
+      <Suspense fallback={<div>Loading...</div>}>
         <section>
           <About />
           <Slider />
           <Contact />
           <Footer />
         </section>
+      </Suspense>
+        
       </div>
     );
   }

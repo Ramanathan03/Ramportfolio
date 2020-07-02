@@ -139,3 +139,22 @@ hr {
     margin-left: 150px;
   }
 }
+@media (min-width:436px) and (max-width:800px) {
+  .portfolio-div{
+    margin-left:0px;
+  }
+  .number-div{
+    left: 90px;
+  }
+  .description{
+    margin-left: 30px;
+    width: 50%;
+    margin-top: 100px;
+  }
+  .viewDiv{
+    left: 50px;
+  }
+  .project-image {
+    margin-left: 0px;
+    }
+}

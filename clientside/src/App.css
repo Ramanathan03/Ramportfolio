@@ -132,6 +132,7 @@
   padding: 6px;
   float: left;
   padding-right: 20px;
+  list-style: none;
 }
 .socialmedia-text {
   color: white;
@@ -247,7 +248,7 @@
     padding-left: 0px;
   }
   .header-description-layout {
-    padding-top: 10%;
+    padding-top: 30%;
   }
   .resume-button {
     width: 35%;
@@ -257,5 +258,11 @@
   }
   .job-line {
     padding: 0px;
+  }
+  .nav-li{
+    margin-right:0px;
+  }
+  .nav-li-contact{
+    margin-right: 10px;
   }
 }

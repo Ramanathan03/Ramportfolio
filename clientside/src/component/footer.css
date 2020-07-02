@@ -1,0 +1,12 @@
+.footer{
+	width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: #040404;
+    margin-top: 60px;
+    background-attachment: fixed;
+}
+
+.footer-socialmedia{
+	padding-left: 40%;
+}
