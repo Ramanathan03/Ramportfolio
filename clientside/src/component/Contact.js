@@ -32,7 +32,7 @@ class Contact extends React.Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3002/send", {
+    fetch("http://localhost:5000/send", {
       method: "POST",
       body: JSON.stringify(this.state),
       headers: {
@@ -58,7 +58,7 @@ class Contact extends React.Component {
       alert("hi");
     }
     return (
-      <div>
+      <div className="Contact">
         <div className="Contact-div">
           <div className="section-header-loader"> </div>
           <span>

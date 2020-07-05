@@ -14,6 +14,16 @@
 .AboutDiv {
   margin-left: 700px;
 }
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+  opacity: 1 !important;
+}
+
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
 .CV-button {
   text-align: center;
   cursor: pointer;
@@ -64,10 +74,25 @@
   font-family: "Roboto", sans-serif;
 }
 .isShowing {
-  transform: translateX(0px);
-  transition: all 0.8s ease-in-out 0s;
+  animation:isShowing 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
   opacity: 1 !important;
+  position: relative;
+  overflow: hidden;
 }
+
+@keyframes isShowing{
+   0%{
+     left:-500px;
+   }
+   
+   100%{
+    left:0px;
+   }
+}
+
+
+
 .about-side-header {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
@@ -103,7 +128,9 @@
 .AboutMe {
   opacity: 0;
 }
-
+.Skills{
+  opacity:0;
+}
 .skills-div {
   padding-left: 160px;
 }

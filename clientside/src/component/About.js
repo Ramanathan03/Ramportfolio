@@ -19,7 +19,7 @@ function About() {
           <div className="about-bg-pic"></div>
           <div className="about-content">
             <h3 className="about-side-header">
-              I am Ram, I'm a passionate and Young Web designer & developer with
+              I am Ram, I'm a passionate and Young Website developer with
               good knowledge about SEO and backend
             </h3>
             <hr className="side-header-line" />

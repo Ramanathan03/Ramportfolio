@@ -128,7 +128,7 @@ class Slider extends React.Component {
           </div>
 
           <div className="slides" onClick={slideLeft}>
-            <img src={project1} className="project-image" />
+            <img src={project1} srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `} className="project-image" width="700px" height="400px" />
           </div>
 
           <div
@@ -136,10 +136,10 @@ class Slider extends React.Component {
             style={{ opacity: "0.5" }}
             onClick={slideLeft}
           >
-            <img src={project1} className="project-image" />
+            <img src={project1} srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `} className="project-image" />
           </div>
           <div className="slides " onClick={slideLeft}>
-            <img src={project2} className="project-image" />
+            <img src={project2} srcSet={` ${project2} 480w, ${project2} 560w, ${project2} 1080w `} className="project-image" />
           </div>
         </div>
       </div>

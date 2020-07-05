@@ -33,19 +33,18 @@ class App extends React.Component {
 
       let NavElement = $(".header-description-layout").offset().top;
 
-      if (scrollval > elementOffset - $(window).height() / 1.3) {
+      if (scrollval > elementOffset - $(window).height() /1.5) {
         $(".AboutMe").addClass("isShowing");
+        
       }
 
-      if (scrollval > elementOffsetSkills - $(window).height() / 1.3) {
-        $(".Skills").addClass("isShowing");
+      if (scrollval > elementOffsetSkills - $(window).height() / 2) {
+        $(".Skills").addClass("come-in");
       }
 
-      if (scrollval > elementOffsetPortfolio - $(window).height() / 1.3) {
-        $(".portfolio").addClass("isShowing");
-      }
-      if (scrollval > elementOffsetContact - $(window).height() / 1.3) {
-        $(".Contact-div").addClass("isShowing");
+      
+      if (scrollval > elementOffsetContact - $(window).height() / 1.5) {
+        $(".Contact").addClass("isShowing");
       }
 
       if (scrollval > NavElement + 50) {
