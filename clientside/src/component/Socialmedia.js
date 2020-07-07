@@ -10,7 +10,7 @@ function Socialmedia() {
       </li>
 
       <li className="socialmedia">
-        <a href="https://www.linkedin.com/in/ramanathan-annes-912b70159/" className="socialmedia-text">
+        <a href="https://www.instagram.com/_ram_offl/" className="socialmedia-text">
           <i className="fab fa-instagram   "></i>
         </a>
       </li>

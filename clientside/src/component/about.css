@@ -112,6 +112,7 @@
   width: 85%;
   padding-top: 15px;
   color: #b9b9b9;
+
 }
 
 .about-grid {
@@ -119,7 +120,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 3fr 3fr;
-  grid-template-rows: 90vh;
+  grid-template-rows: 100vh;
   grid-gap: 100px;
   margin-top: 2%;
   transform: translateX(-20px);
@@ -160,6 +161,7 @@
   margin-bottom: 10px;
   z-index: -1;
 }
+
 .progression-tag:before {
   content: "";
   position: absolute;
@@ -252,6 +254,11 @@
     width: 92%;
     padding-left: 10%;
   }
+  .mobile-ul{
+    width: 92%;
+    padding-left: 10%;
+    list-style-position: inside;
+  }
   .CV-button {
     width: 45%;
     margin-left: 10%;
@@ -277,6 +284,7 @@
     grid-gap: 30px;
     margin-top: 2%;
   }
+
   .about-bg-pic {
     width: 300px;
     height: 200px;

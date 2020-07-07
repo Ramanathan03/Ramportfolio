@@ -10,3 +10,9 @@
 .footer-socialmedia{
 	padding-left: 40%;
 }
+
+@media (max-width: 435px){
+  .footer-socialmedia {
+    padding-left: 50px;
+}
+}

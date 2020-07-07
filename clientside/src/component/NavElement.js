@@ -61,7 +61,7 @@ class NavElement extends React.Component {
         $(".X-cancle").css({ display: "none" });
         $(".nav-ul").css({ display: "none" });
         $("body").css({
-         "overflow-y": "scroll"
+         "overflow-y": "scroll" 
         });
       }
     }
