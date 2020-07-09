@@ -64,7 +64,7 @@ let port = 5000;
 app.use(cors());
 app.use(compression());
 app.use(express.json());
-//app.use("/", router);
+app.use("/", router);
 app.listen(process.env.PORT || port);
 
 app.use(express.static(path.join(__dirname, "clientside/build")));
