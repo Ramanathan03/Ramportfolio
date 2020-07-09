@@ -76,3 +76,4 @@ if (process.env.NODE_ENV === "production") {
     res.sendfile(path.join((__dirname = "clientside/public/index.html")));
   });
 }
+console.log("outside", process.env.PORT);

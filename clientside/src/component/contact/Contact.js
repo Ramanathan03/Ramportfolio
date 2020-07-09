@@ -37,6 +37,7 @@ class Contact extends React.Component {
       body: JSON.stringify(this.state),
       headers: {
         Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
       },
     })
