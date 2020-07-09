@@ -20,7 +20,11 @@ oauth2Client.setCredentials({
   refresh_token: process.env.REFRESHTOKEN,
 });
 const accessToken = oauth2Client.getAccessToken();
-
+console.log(
+  process.env.CLIENTID,
+  process.env.CLIENTSECRET,
+  process.env.REFRESHTOKEN
+);
 let transport = {
   service: "gmail",
   host: "smtp.gmail.com",
@@ -57,7 +61,7 @@ router.post("/send", (req, res, next) => {
   let content = `<h1>${name}</h1> <p>You can contact me here ${email}</p> <p>${subject}</p>  `;
 
   let mail = {
-    from: email,
+    from: process.env.Email,
     to: "Ramanathanannes47@gmail.com", // Change to email address that you want to receive messages on
     subject: subject,
     html: content,
