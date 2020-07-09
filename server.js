@@ -22,10 +22,7 @@ oauth2Client.setCredentials({
 const accessToken = oauth2Client.getAccessToken();
 
 let transport = {
-  host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
-  port: 587,
-  secure: false,
-  requireTLS: true,
+  service: "gmail",
   auth: {
     type: "OAUTH2",
     user: process.env.EMAIL,
