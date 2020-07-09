@@ -32,7 +32,7 @@ class Contact extends React.Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch("https://localhost:5000/send", {
+    fetch("https://ramportfolio.herokuapp.com/send", {
       method: "POST",
       body: JSON.stringify(this.state),
       headers: {

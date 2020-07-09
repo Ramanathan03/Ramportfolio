@@ -60,11 +60,12 @@ router.post("/send", (req, res, next) => {
 });
 
 const app = express();
+let port = 5000;
 app.use(cors());
 app.use(compression());
 app.use(express.json());
 app.use("/", router);
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || port);
 
 app.use(express.static(path.join(__dirname, "clientside/build")));
 
@@ -78,4 +79,4 @@ if (process.env.NODE_ENV === "production") {
     res.sendfile(path.join((__dirname = "clientside/public/index.html")));
   });
 }
-console.log("outside", process.env.PORT);
+console.log("outside", port);
