@@ -32,7 +32,7 @@ class Contact extends React.Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3002/send", {
+    fetch("/send", {
       method: "POST",
       body: JSON.stringify(this.state),
       headers: {
