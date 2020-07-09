@@ -23,6 +23,7 @@ const accessToken = oauth2Client.getAccessToken();
 
 let transport = {
   service: "gmail",
+  host: "smtp.gmail.com",
   auth: {
     type: "OAUTH2",
     user: process.env.EMAIL,
