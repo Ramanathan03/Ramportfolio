@@ -29,7 +29,7 @@ transporter.verify((error, success) => {
   }
 });
 
-router.post("/send", (req, res, next) => {
+app.post("/send", (req, res, next) => {
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
@@ -44,17 +44,17 @@ router.post("/send", (req, res, next) => {
   };
 
   transporter.sendMail(mail, (err, data) => {
-    console.log(err, data);
     if (err) {
       res.json({
         status: "fail",
+        data: data,
       });
       console.log(err, data);
     } else {
       res.json({
         status: "success",
+        data: data,
       });
-      console.log(err, data);
     }
   });
 });
@@ -64,7 +64,7 @@ let port = 5000;
 app.use(cors());
 app.use(compression());
 app.use(express.json());
-app.use("/", router);
+//app.use("/", router);
 app.listen(process.env.PORT || port);
 
 app.use(express.static(path.join(__dirname, "clientside/build")));
