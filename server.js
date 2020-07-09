@@ -7,6 +7,7 @@ const path = require("path");
 const env = require("dotenv");
 
 env.config({ path: path.join(__dirname, ".env") });
+const app = express();
 
 let transport = {
   host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
@@ -59,7 +60,6 @@ app.post("/send", (req, res, next) => {
   });
 });
 
-const app = express();
 let port = 5000;
 app.use(cors());
 app.use(compression());
