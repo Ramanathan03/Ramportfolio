@@ -30,7 +30,7 @@ transporter.verify((error, success) => {
   }
 });
 
-app.post("/send", (req, res, next) => {
+router.post("/send", (req, res, next) => {
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
