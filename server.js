@@ -4,10 +4,22 @@ let nodemailer = require("nodemailer");
 let cors = require("cors");
 let compression = require("compression");
 const path = require("path");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 const env = require("dotenv");
 
 env.config({ path: path.join(__dirname, ".env") });
 const app = express();
+
+const oauth2Client = new OAuth2(
+  process.env.CLIENTID,
+  process.env.CLIENTSECRET,
+  "https://developers.google.com/oauthplayground"
+);
+oauth2Client.setCredentials({
+  refresh_token: process.env.REFRESHTOKEN,
+});
+const accessToken = oauth2Client.getAccessToken();
 
 let transport = {
   host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
@@ -15,8 +27,12 @@ let transport = {
   secure: false,
   requireTLS: true,
   auth: {
+    type: "OAUTH2",
     user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    clientId: process.env.CLIENTID,
+    clientSecret: process.env.CLIENTSECRET,
+    refreshToken: process.env.REFRESHTOKEN,
+    accessToken: accessToken,
   },
 };
 
