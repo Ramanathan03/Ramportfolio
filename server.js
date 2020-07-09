@@ -31,6 +31,9 @@ let transport = {
     refreshToken: process.env.REFRESHTOKEN,
     accessToken: accessToken,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 };
 
 var transporter = nodemailer.createTransport(transport);
@@ -72,6 +75,7 @@ router.post("/send", (req, res, next) => {
         err: err,
       });
     }
+    transporter.close();
   });
 });
 
