@@ -49,12 +49,14 @@ router.post("/send", (req, res, next) => {
       res.json({
         status: "fail",
         data: data,
+        err: err,
       });
       console.log(err, data);
     } else {
       res.json({
         status: "success",
         data: data,
+        err: err,
       });
     }
   });

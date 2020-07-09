@@ -44,7 +44,7 @@ class Contact extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response.status === "success") {
-          console.log(response, response.status);
+          console.log(response, response.status, response.err, response.data);
 
           let newElement = $(
             "<p class='success'>Soon Get in Touch with you Thank you</p>"
@@ -57,7 +57,7 @@ class Contact extends React.Component {
           }, 8000);
           document.getElementById("contact-form").reset();
         } else if (response.status === "fail") {
-          console.log(response, response.status);
+          console.log(response, response.status, response.err, response.data);
           let newElement = $("<p class='Error'>Sorry Try again later</p>");
           $("#contact-form").append(newElement);
           $(".sendButton").addClass("color-change-error");
