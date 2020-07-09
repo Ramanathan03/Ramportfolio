@@ -1,23 +1,16 @@
-import React,{ Suspense} from "react";
-import { Route, Switch } from "react-router-dom";
-import Header from "./component/Header";
+import React, { Suspense } from "react";
+
+import Header from "./component/header/Header";
 import $ from "jquery";
 import "./App.css";
 
 // React Lazy
-const Contact =  React.lazy(()=> import("./component/Contact"));
-const About  =  React.lazy(()=> import("./component/About"));
-const Slider = React.lazy(()=> import("./component/Slider"));
-const Footer =  React.lazy(()=> import("./component/Footer"));
-
-
-
+const Contact = React.lazy(() => import("./component/contact/Contact"));
+const About = React.lazy(() => import("./component/about/About"));
+const Slider = React.lazy(() => import("./component/slideshow/Slider"));
+const Footer = React.lazy(() => import("./component/footer/Footer"));
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   connectToServer = () => {
     fetch("/");
   };
@@ -28,21 +21,18 @@ class App extends React.Component {
       let scrollval = $(this).scrollTop();
       let elementOffset = $(".about-grid").offset().top;
       let elementOffsetSkills = $(".skills-div").offset().top;
-      let elementOffsetPortfolio = $(".portfolio").offset().top;
       let elementOffsetContact = $(".Contact-div").offset().top;
 
       let NavElement = $(".header-description-layout").offset().top;
 
-      if (scrollval > elementOffset - $(window).height() /1.5) {
+      if (scrollval > elementOffset - $(window).height() / 1.5) {
         $(".AboutMe").addClass("isShowing");
-        
       }
 
       if (scrollval > elementOffsetSkills - $(window).height() / 2) {
         $(".Skills").addClass("come-in");
       }
 
-      
       if (scrollval > elementOffsetContact - $(window).height() / 1.5) {
         $(".Contact").addClass("isShowing");
       }
@@ -63,16 +53,15 @@ class App extends React.Component {
 
     return (
       <div>
-      <Header />
-      <Suspense fallback={<div>Loading...</div>}>
-        <section>
-          <About />
-          <Slider />
-          <Contact />
-          <Footer />
-        </section>
-      </Suspense>
-        
+        <Header />
+        <Suspense fallback={<div>Loading...</div>}>
+          <section>
+            <About />
+            <Slider />
+            <Contact />
+            <Footer />
+          </section>
+        </Suspense>
       </div>
     );
   }

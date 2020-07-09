@@ -1,5 +1,5 @@
 .about-bg-pic {
-  background: url("../img/about-image.png");
+  background: url("../../img/about-image.png");
   width: 100%;
   height: 450px;
   background-size: cover;
@@ -20,9 +20,10 @@
   opacity: 1 !important;
 }
 
-
 @keyframes come-in {
-  to { transform: translateY(0); }
+  to {
+    transform: translateY(0);
+  }
 }
 .CV-button {
   text-align: center;
@@ -74,24 +75,22 @@
   font-family: "Roboto", sans-serif;
 }
 .isShowing {
-  animation:isShowing 1s ease-in-out 0s;
+  animation: isShowing 1s ease-in-out 0s;
   transition: all 1s ease-in-out 0s;
   opacity: 1 !important;
   position: relative;
   overflow: hidden;
 }
 
-@keyframes isShowing{
-   0%{
-     left:-500px;
-   }
-   
-   100%{
-    left:0px;
-   }
+@keyframes isShowing {
+  0% {
+    left: -500px;
+  }
+
+  100% {
+    left: 0px;
+  }
 }
-
-
 
 .about-side-header {
   font-size: 18px;
@@ -112,11 +111,9 @@
   width: 85%;
   padding-top: 15px;
   color: #b9b9b9;
-
 }
 
 .about-grid {
-  display: grid;
   position: relative;
   display: grid;
   grid-template-columns: 3fr 3fr;
@@ -129,8 +126,8 @@
 .AboutMe {
   opacity: 0;
 }
-.Skills{
-  opacity:0;
+.Skills {
+  opacity: 0;
 }
 .skills-div {
   padding-left: 160px;
@@ -202,7 +199,7 @@
   grid-template-rows: 60vh;
 }
 
-@media (max-width:435px) {
+@media (max-width: 435px) {
   .about-grid {
     grid-template-columns: 12fr;
     grid-template-rows: 20vh;
@@ -254,7 +251,7 @@
     width: 92%;
     padding-left: 10%;
   }
-  .mobile-ul{
+  .mobile-ul {
     width: 92%;
     padding-left: 10%;
     list-style-position: inside;
@@ -332,8 +329,7 @@
     margin-left: 0px;
     margin-right: 0px;
   }
-  .AboutDiv{
-    margin-left:0px;
+  .AboutDiv {
+    margin-left: 0px;
   }
 }
-

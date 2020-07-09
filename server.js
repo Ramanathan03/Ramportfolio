@@ -2,7 +2,7 @@ let express = require("express");
 let router = express.Router();
 let nodemailer = require("nodemailer");
 let cors = require("cors");
-let compression = require('compression')
+let compression = require("compression");
 const path = require("path");
 const env = require("dotenv");
 
@@ -11,15 +11,13 @@ env.config({ path: path.join(__dirname, ".env") });
 let transport = {
   host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
   port: 587,
-  secure:false,
-  requireTLS:true,
+  secure: false,
+  requireTLS: true,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD,
   },
 };
-
-
 
 var transporter = nodemailer.createTransport(transport);
 
@@ -46,7 +44,7 @@ router.post("/send", (req, res, next) => {
   };
 
   transporter.sendMail(mail, (err, data) => {
-    console.log(err, data)
+    console.log(err, data);
     if (err) {
       res.json({
         status: "fail",
@@ -63,17 +61,18 @@ const app = express();
 app.use(cors());
 app.use(compression());
 app.use(express.json());
-//app.use("/", router);
+app.use("/", router);
 app.listen(process.env.PORT || 5000);
 
-app.use(express.static(path.join(__dirname, 'clientside/build')));
+app.use(express.static(path.join(__dirname, "clientside/build")));
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, 'clientside/build')));
-    app.get('*',(req,res)=>{res.sendfile(path.join(__dirname = 'clientside/build/index.html'));})
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "clientside/build")));
+  app.get("*", (req, res) => {
+    res.sendfile(path.join((__dirname = "clientside/build/index.html")));
+  });
+} else {
+  app.get("*", (req, res) => {
+    res.sendfile(path.join((__dirname = "clientside/public/index.html")));
+  });
 }
-else{
-      app.get('*',(req,res)=>{res.sendfile(path.join(__dirname = 'clientside/public/index.html'));})
-}
-

@@ -1,8 +1,8 @@
 .contact-grid {
-  display: grid;
   position: relative;
   display: grid;
   grid-template-columns: 4fr 3fr;
+  grid-template-rows: 90vh;
 }
 .Contact-div {
   margin-top: 100px;
@@ -15,7 +15,6 @@
   width: 30%;
   height: 40px;
   border: 1px solid #fd4b1c;
-
   background: no-repeat, #fd4b1c;
   margin-left: 6px;
   font-family: "Roboto", sans-serif;
@@ -57,11 +56,45 @@
   text-align: initial;
   font-weight: 500;
 }
+.success {
+  position: absolute;
+  top: -30px;
+  opacity: 0.9;
+  background: linear-gradient(#43ff00, #05942a);
+  width: 30px;
+  box-shadow: 0px 0px 10px #153e12;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 1s;
+  text-align: center;
+  padding: 30px;
+}
+.Error {
+  position: absolute;
+  top: -30px;
+  opacity: 0.9;
+  background: linear-gradient(#ff0000, #770101);
+  width: 30px;
+  box-shadow: 0px 0px 10px #ff0000;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 1s;
+  text-align: center;
+  padding: 30px;
+}
+.color-change-sucess {
+  background: linear-gradient(#43ff00, #05942a) !important;
+  transition: 1s ease-in-out;
+}
+.color-change-error {
+  background: linear-gradient(#ff0000, #770101) !important;
+  transition: 1s ease-in-out;
+}
 .contact-form-input::placeholder {
   padding-left: 5px;
 }
 
-.Contact{
+.Contact {
   opacity: 0;
 }
 
@@ -140,11 +173,11 @@
     text-align: initial;
     padding-right: 0px;
   }
-  ul{
-    padding:0px;
+  ul {
+    padding: 0px;
   }
-  .Contact-div{
-    margin-left:0px;
+  .Contact-div {
+    margin-left: 0px;
   }
   .social-media-contacts {
     padding-left: 20px;
@@ -152,7 +185,7 @@
   .padding-left-in-contact {
     width: 100% !important;
     padding: 0px;
-    font-size:17px;
+    font-size: 17px;
   }
   .sendButton {
     width: 50%;

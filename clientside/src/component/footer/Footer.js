@@ -1,16 +1,18 @@
 import React from "react";
 import "./footer.css";
-import Socialmedia from './Socialmedia'
-import NavElement from './NavElement'
+import Socialmedia from "../header/Socialmedia";
+
 function Footer() {
   return (
     <div className="footer">
       <h5>"The two most powerful warriors are patience and time"</h5>
-      <p>Feel free to contact me Always open for new project and work with you </p>
+      <p>
+        Feel free to contact me Always open for new project and work with you{" "}
+      </p>
 
       <p>Ramanathan47@hotmail.com</p>
       <div className="footer-socialmedia">
-      <Socialmedia />
+        <Socialmedia />
       </div>
     </div>
   );

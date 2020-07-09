@@ -1,5 +1,5 @@
 import React from "react";
-import Socialmedia from "./Socialmedia";
+import Socialmedia from "../header/Socialmedia";
 import "./contact.css";
 import $ from "jquery";
 
@@ -43,20 +43,33 @@ class Contact extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response.status === "success") {
-          alert("Message Sent.");
+          let newElement = $(
+            "<p class='success'>Soon Get in Touch with you Thank you</p>"
+          );
+          $("#contact-form").append(newElement);
+          $(".sendButton").addClass("color-change-sucess");
+          setInterval(() => {
+            newElement.remove();
+            $(".sendButton").removeClass("color-change-sucess");
+          }, 8000);
           document.getElementById("contact-form").reset();
         } else if (response.status === "fail") {
-          alert("Message failed to send.");
+          let newElement = $("<p class='Error'>Sorry Try again later</p>");
+          $("#contact-form").append(newElement);
+          $(".sendButton").addClass("color-change-error");
+          setInterval(() => {
+            newElement.remove();
+            $(".sendButton").removeClass("color-change-error");
+          }, 8000);
+
+          document.getElementById("contact-form").reset();
         }
       });
   };
 
   render() {
-    let paddingContactForm = { padding: "5px" };
     let spanColor = { color: "red" };
-    function rocket() {
-      alert("hi");
-    }
+
     return (
       <div className="Contact">
         <div className="Contact-div">
@@ -103,6 +116,7 @@ class Contact extends React.Component {
                 type="text"
                 className="contact-form-input"
                 name="FullName"
+                required
                 onChange={this.handleNameChange}
               />
             </div>
@@ -116,6 +130,7 @@ class Contact extends React.Component {
                 type="email"
                 className="contact-form-input"
                 name="email"
+                required
                 onChange={this.handleEmailChange}
               />
             </div>
@@ -131,6 +146,7 @@ class Contact extends React.Component {
                 className="contact-form-input"
                 name="subject"
                 onChange={this.handlesubjectChange}
+                required
               />
             </div>
             <div className="mobileViewPadding">
@@ -143,10 +159,11 @@ class Contact extends React.Component {
                 name="message"
                 className="contact-form-textarea"
                 onChange={this.handleMessageChange}
+                required
               />
             </div>
-            <button type="submit" className="sendButton" onClick={rocket}>
-              Send Email{" "}
+            <button type="submit" className="sendButton">
+              Send Email
               <span style={{ paddingLeft: "5px" }}>
                 <i className="far fa-paper-plane"></i>
               </span>

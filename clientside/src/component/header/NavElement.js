@@ -1,16 +1,12 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 import { Link, Route, Switch } from "react-router-dom";
 import $ from "jquery";
-import Contact from "./Contact";
-import About from "./About";
-import Slider from "./Slider";
+import Contact from "../contact/Contact";
+import About from "../about/About";
+import Slider from "../slideshow/Slider";
 import Header from "./Header";
 class NavElement extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   AboutScroll = () => {
     $("html, body").animate(
       {
@@ -47,30 +43,28 @@ class NavElement extends React.Component {
 
   mobileMenu = () => {
     $(document).ready(() => {
-      if($(window).width() < 435){
-      let menu = $(".mobile-menu").css("display");
-      if (menu === "flex") {
-        $(".mobile-menu").css({ display: "none" });
-        $(".X-cancle").css({ display: "flex" });
-        $(".nav-ul").css({ display: "flex" });
-        $("body").css({
-         "overflow-y": "hidden"
-        });
-      } else {
-        $(".mobile-menu").css({ display: "flex" });
-        $(".X-cancle").css({ display: "none" });
-        $(".nav-ul").css({ display: "none" });
-        $("body").css({
-         "overflow-y": "scroll" 
-        });
+      if ($(window).width() < 435) {
+        let menu = $(".mobile-menu").css("display");
+        if (menu === "flex") {
+          $(".mobile-menu").css({ display: "none" });
+          $(".X-cancle").css({ display: "flex" });
+          $(".nav-ul").css({ display: "flex" });
+          $("body").css({
+            "overflow-y": "hidden",
+          });
+        } else {
+          $(".mobile-menu").css({ display: "flex" });
+          $(".X-cancle").css({ display: "none" });
+          $(".nav-ul").css({ display: "none" });
+          $("body").css({
+            "overflow-y": "scroll",
+          });
+        }
       }
-    }
     });
-
   };
 
   render() {
-
     return (
       <div>
         <Switch>

@@ -2,12 +2,9 @@ import React from "react";
 import Socialmedia from "./Socialmedia";
 import NavElement from "./NavElement";
 import $ from "jquery";
-import "../App.css";
+import "../../App.css";
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   ProjectScroll = () => {
     $("html, body").animate(
       {
@@ -21,8 +18,8 @@ class Header extends React.Component {
     return (
       <header className="header-props">
         <NavElement />
-       <div></div>
-       <div></div>
+        <div></div>
+        <div></div>
         <div className="header-description-layout">
           <div className="header-padding-tabletView">
             <div className="job-line">

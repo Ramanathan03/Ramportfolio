@@ -1,13 +1,10 @@
 import React from "react";
 import "./slider.css";
 import $ from "jquery";
-import project1 from "../img/project1.png";
-import project2 from "../img/project2.png";
+import project1 from "../../img/project1.png";
+import project2 from "../../img/project2.png";
 
 class Slider extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     let index = 0;
     let next = 1;
@@ -102,13 +99,18 @@ class Slider extends React.Component {
 
           <div className="Source">
             <div className="viewDiv">
-              <a style={{ margin: "0px" }} className="anchor-Text">
+              <a
+                href="https://github.com/"
+                style={{ margin: "0px" }}
+                className="anchor-Text"
+              >
                 View Case
               </a>
               <hr />
             </div>
             <div className="viewDiv">
               <a
+                href="https://github.com/"
                 style={{ margin: "0px", opacity: "0" }}
                 className="anchor-Text"
               >
@@ -118,6 +120,7 @@ class Slider extends React.Component {
             </div>
             <div className="viewDiv">
               <a
+                href="https://github.com/"
                 style={{ margin: "0px", opacity: "0" }}
                 className="anchor-Text"
               >
@@ -128,7 +131,14 @@ class Slider extends React.Component {
           </div>
 
           <div className="slides" onClick={slideLeft}>
-            <img src={project1} srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `} className="project-image" width="700px" height="400px" />
+            <img
+              src={project1}
+              alt="project-screenshot1"
+              srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `}
+              className="project-image"
+              width="700px"
+              height="400px"
+            />
           </div>
 
           <div
@@ -136,10 +146,20 @@ class Slider extends React.Component {
             style={{ opacity: "0.5" }}
             onClick={slideLeft}
           >
-            <img src={project1} srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `} className="project-image" />
+            <img
+              src={project1}
+              alt="project-screenshot2"
+              srcSet={` ${project1} 480w, ${project1} 560w, ${project1} 1080w `}
+              className="project-image"
+            />
           </div>
           <div className="slides " onClick={slideLeft}>
-            <img src={project2} srcSet={` ${project2} 480w, ${project2} 560w, ${project2} 1080w `} className="project-image" />
+            <img
+              src={project2}
+              alt="project-screenshot3"
+              srcSet={` ${project2} 480w, ${project2} 560w, ${project2} 1080w `}
+              className="project-image"
+            />
           </div>
         </div>
       </div>

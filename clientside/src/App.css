@@ -13,10 +13,6 @@
   background-size: 100% 100%;
 }
 
-.section {
-  display: grid;
-}
-
 .horizontal {
   border: 1px solid #fd4b1c;
   width: 3%;
@@ -139,11 +135,15 @@
   font-size: 25px;
 }
 
-@media (max-width:435px) {
+@media (max-width: 435px) {
   .header-description-layout {
     display: grid;
     grid-template-columns: 12fr;
     padding-top: 25%;
+  }
+  .header-title {
+    padding-left: 0px;
+    font-size: 3em;
   }
   .job-line {
     padding-left: 14.5%;
@@ -194,25 +194,22 @@
     background: #000000;
     box-shadow: 0px 0px 5px black;
     transition: 2s;
-    
+
     height: 100vh;
-    width:60vw;
+    width: 60vw;
     position: absolute;
   }
   .nav-li {
- 
     position: relative;
     top: -250px;
-}
-.nav-li-contact {
-    background-color: transparent; 
-   
+  }
+  .nav-li-contact {
+    background-color: transparent;
+
     margin-bottom: 20px;
     position: relative;
     top: -250px;
-   
-}
-
+  }
 
   .X {
     width: 40px;
@@ -235,7 +232,7 @@
     z-index: 5;
   }
 }
-@media (min-width:436px) and (max-width:800px) {
+@media (min-width: 436px) and (max-width: 800px) {
   .header-props {
     height: 40em;
   }
@@ -259,10 +256,10 @@
   .job-line {
     padding: 0px;
   }
-  .nav-li{
-    margin-right:0px;
+  .nav-li {
+    margin-right: 0px;
   }
-  .nav-li-contact{
+  .nav-li-contact {
     margin-right: 10px;
   }
 }
