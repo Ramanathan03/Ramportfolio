@@ -20,12 +20,6 @@ oauth2Client.setCredentials({
   refresh_token: process.env.REFRESHTOKEN,
 });
 const accessToken = oauth2Client.getAccessToken();
-console.log(
-  process.env.CLIENTID,
-  process.env.CLIENTSECRET,
-  process.env.REFRESHTOKEN,
-  accessToken
-);
 let transport = {
   service: "gmail",
   host: "smtp.gmail.com",
@@ -106,4 +100,3 @@ if (process.env.NODE_ENV === "production") {
     res.sendfile(path.join((__dirname = "clientside/public/index.html")));
   });
 }
-console.log("outside", port);
