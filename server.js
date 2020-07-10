@@ -23,12 +23,13 @@ const accessToken = oauth2Client.getAccessToken();
 console.log(
   process.env.CLIENTID,
   process.env.CLIENTSECRET,
-  process.env.REFRESHTOKEN
+  process.env.REFRESHTOKEN,
+  accessToken
 );
 let transport = {
   service: "gmail",
   host: "smtp.gmail.com",
-  port: 465,
+  port: 587,
   auth: {
     type: "OAUTH2",
     user: process.env.EMAIL,
@@ -62,7 +63,7 @@ router.post("/send", (req, res, next) => {
 
   let mail = {
     from: process.env.Email,
-    to: "Ramanathanannes47@gmail.com", // Change to email address that you want to receive messages on
+    to: "Ramanathanannes47@gmail.com",
     subject: subject,
     html: content,
   };
