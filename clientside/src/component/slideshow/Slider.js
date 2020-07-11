@@ -98,36 +98,32 @@ class Slider extends React.Component {
           </div>
 
           <div className="Source">
-            <div className="viewDiv">
-              <a
-                href="https://github.com/"
-                style={{ margin: "0px" }}
-                className="anchor-Text"
-              >
-                View Case
-              </a>
+            <a
+              href="https://github.com/"
+              style={{ margin: "0px" }}
+              className="anchor-Text link viewDiv"
+            >
+              View Case
               <hr />
-            </div>
-            <div className="viewDiv">
-              <a
-                href="https://github.com/"
-                style={{ margin: "0px", opacity: "0" }}
-                className="anchor-Text"
-              >
-                View Case
-              </a>
+            </a>
+
+            <a
+              href="https://github.com/Ramanathan03/RamPortfolio/tree/master/clientside"
+              style={{ margin: "0px", opacity: "0" }}
+              className="anchor-Text link viewDiv"
+            >
+              View Case
               <hr />
-            </div>
-            <div className="viewDiv">
-              <a
-                href="https://github.com/"
-                style={{ margin: "0px", opacity: "0" }}
-                className="anchor-Text"
-              >
-                View Case
-              </a>
+            </a>
+
+            <a
+              href="https://github.com/"
+              style={{ margin: "0px", opacity: "0" }}
+              className="anchor-Text link viewDiv"
+            >
+              View Case
               <hr />
-            </div>
+            </a>
           </div>
 
           <div className="slides" onClick={slideLeft}>

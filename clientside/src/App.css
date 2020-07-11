@@ -263,3 +263,26 @@
     margin-right: 10px;
   }
 }
+@media (min-width: 800px) and (max-width: 1350px) {
+  .header-props {
+    height: 90vh;
+  }
+  .nav-li {
+    padding-top: 50px;
+  }
+  .nav-li-contact {
+    margin-top: 40px;
+  }
+  .nav-text {
+    font-size: 20px;
+  }
+  .header-description-layout {
+    padding-top: 45%;
+  }
+  .job-line {
+    padding-left: 24.5%;
+  }
+  .about {
+    width: 60%;
+  }
+}

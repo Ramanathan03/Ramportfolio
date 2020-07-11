@@ -124,6 +124,7 @@
   }
   .contact-grid {
     grid-template-columns: 12fr;
+    grid-template-rows: none;
   }
   .title {
     text-align: initial;
@@ -189,5 +190,48 @@
   }
   .sendButton {
     width: 50%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1350px) {
+  .contact-grid {
+    grid-template-rows: none;
+  }
+  .padding-left-in-contact {
+    padding-left: 17%;
+    color: #cacaca;
+    width: 80%;
+    font-size: 19px;
+  }
+  .title {
+    text-align: initial;
+    padding-left: 80px;
+    padding-right: 0px;
+  }
+  .padding-left-in-contact {
+    padding-left: 14%;
+    color: #cacaca;
+    width: 80%;
+    font-size: 19px;
+  }
+  .social-media-contacts {
+    padding-left: 6%;
+  }
+  .sendButton {
+    width: 50%;
+  }
+  .contact-form-textarea {
+    width: 400px;
+  }
+  .contact-form-input {
+    width: 400px;
+  }
+  .Contact-div {
+    margin-left: 80px;
+  }
+  .side-header {
+    padding-right: 0px;
+    padding-left: 80px;
+    text-align: initial;
   }
 }

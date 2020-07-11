@@ -333,3 +333,41 @@
     margin-left: 0px;
   }
 }
+@media (min-width: 800px) and (max-width: 1350px) {
+  .AboutDiv {
+    margin-left: 580px;
+  }
+  .skills-column {
+    grid-template-rows: 40vh;
+  }
+  .about-grid {
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 80vh;
+    grid-gap: 0px;
+  }
+  .about-side-header {
+    font-size: 20px;
+    width: 100%;
+  }
+  .about-p-tag {
+    width: 100%;
+  }
+  .CV-button {
+    width: 50%;
+  }
+  .about-content {
+    padding-left: 10px;
+  }
+  .loader-dot-outer {
+    margin-left: 24.2%;
+  }
+  .loader-dot {
+    margin-left: 24.3%;
+  }
+  .horizontal-line {
+    margin-left: 19%;
+  }
+  .section-headers {
+    margin-left: 20px;
+  }
+}

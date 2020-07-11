@@ -65,6 +65,15 @@ class NavElement extends React.Component {
   };
 
   render() {
+    if ($(window).width() < 435) {
+      $(".mobile-menu").css({ display: "flex" });
+      $(".X-cancle").css({ display: "none" });
+      $(".nav-ul").css({ display: "none" });
+    } else {
+      $(".mobile-menu").css({ display: "none" });
+      $(".X-cancle").css({ display: "none" });
+      $(".nav-ul").css({ display: "flex" });
+    }
     return (
       <div>
         <Switch>
